@@ -1,3 +1,6 @@
+let video = document.querySelector(".loading-video");
+let loading = document.getElementsByClassName("loading")[0];
+let main = document.querySelector("main");
 let input = document.getElementById("input").value;
 let titulo = document.getElementById("msg-titulo");
 let principal = document.getElementById("msg-principal");
@@ -28,4 +31,11 @@ function criptografar() {
     principal.innerHTML = palavraCripto;
 
 }
+
+video.addEventListener("ended", (event) => {
+    main.style.visibility = "block";
+    loading.style.display = "none";
+    
+
+  });
 

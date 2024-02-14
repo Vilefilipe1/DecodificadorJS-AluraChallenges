@@ -1,14 +1,11 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: black;
+    /* background-color: black; */
 }
 loading {
     background-color: black;
     display: flex; 
     visibility: visible;
     justify-content: center;
-}
-main {
-    display: none;
 }

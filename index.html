@@ -15,19 +15,24 @@
         </video>
     </loading> -->
     <main>
-        <input id="input" type="text"></input>
-        <h5>Apenas letras minúsculas e sem acento.</h5>
-        <button onclick="criptografar()">Criptografar</button>
-        <button onclick="descriptografar()">Descriptografar</button>
-
-        <div>
-            <h1 id="msg-titulo">Nenhuma mensagem Encontrada.</h1>
-            <p id="msg-principal">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        <menu>
+            <img src="img/Vector.png">
+        </menu>
+        <div class="main">
+            <input autofocus placeholder="Digite seu texto." id="input" type="text" value="vasc"></input>
+            <div>
+                <h5>Apenas letras minúsculas e sem acento.</h5>
+                <button onclick="criptografar()">Criptografar</button>
+                <button onclick="descriptografar()">Descriptografar</button>
+            </div>
         </div>
-        <footer>
-            <p>Feito por Filipe Ciríaco</p>
-            <p>filipeciriaco0@gmail.com</p>
-        </footer>
+        <div class="resultado">
+            <img src="img/High quality products 1 1.svg">
+            <div class="resultado__msg">
+                <h1 id="msg-titulo">Nenhuma mensagem Encontrada.</h1>
+                <p id="msg-principal">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </div>
     </main>
 
     

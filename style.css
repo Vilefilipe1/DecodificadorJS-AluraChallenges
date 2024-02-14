@@ -1,11 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    /* background-color: black; */
+    font-family: "Inter", sans-serif;
 }
 loading {
     background-color: black;
     display: flex; 
     visibility: visible;
     justify-content: center;
+}
+
+menu {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    background-color: #F3F5FC;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding-top: 10%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input {
+    border: 0;
+    background-color: #F3F5FC;
+    color: #0A3871;
+    width: 60vw;
+    font-size: 32px;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 30vw;
+    height: 95vh;
+    border-radius: 32px;
+}
+
+.resultado__msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#msg-titulo {
+    font-size: 24px;
+}
+
+#msg-principal {
+    font-size: 16px;
 }

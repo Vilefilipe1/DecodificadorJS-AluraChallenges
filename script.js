@@ -43,7 +43,6 @@ function criptografar() {
     palavraSeparada = input.value.split("");
     palavraSeparada.forEach(trocar);
     let palavraCript = palavraSecreta.join("");
-    // principal.innerHTML = palavraCript;
     resul__start.style.display = "none";
     resul__resposta.style.display = "flex";
     result__resposta__principal.innerHTML = palavraCript;
@@ -56,10 +55,15 @@ function descriptografar() {
     palavraSeparada = input.value.split("");
     palavraSeparada.forEach(trocarRev);
     let palavraCript = palavraSeparada.join("");
-    titulo.innerHTML = "";
-    principal.innerHTML = palavraCript;
+    resul__start.style.display = "none";
+    resul__resposta.style.display = "flex";
+    result__resposta__principal.innerHTML = palavraCript;
 
     palavraSeparada = [];
+}
+
+function copiar() {
+    
 }
 
 video.addEventListener("ended", (event) => {

@@ -19,11 +19,17 @@
             <img src="img/Vector.png">
         </menu>
         <div class="main">
-            <input autofocus placeholder="Digite seu texto." id="input" type="text" value=""></input>
-            <div>
-                <h5>Apenas letras minúsculas e sem acento.</h5>
-                <button onclick="criptografar()">Criptografar</button>
-                <button onclick="descriptografar()">Descriptografar</button>
+            <textarea spellcheck="false" autofocus placeholder="Digite seu texto." id="input" type="text" value=""></textarea>
+            <div class="main__info">
+                <div style="display: flex; gap: 8px;">
+                    <img src="img/info.svg">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="main__info__area">
+                    <button class="main__info__area__botao" id="botao__cript" onclick="criptografar()">Criptografar</button>
+                    <button class="main__info__area__botao" onclick="descriptografar()">Descriptografar</button>
+                </div>
+
             </div>
         </div>
         <div class="resultado">
@@ -36,7 +42,7 @@
             </div>
             <div class="resultado__resposta">
                 <p id="resultado__resposta__principal"></p>
-                <button id="resultado__resposta__botao">Copiar</button>
+                <button id="resultado__resposta__botao" onclick="copiar()">Copiar</button>
             </div>  
         </div>
     </main>

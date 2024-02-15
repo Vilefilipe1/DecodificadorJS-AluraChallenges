@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+:root {
+    --background-color: white;
+    --background2-color: #F3F5FC;
+    --primary-color: #0A3871;
+    --border-color: #0A3871;
+    --font-color: #495057;
+    --font2-color: black;
+
+    
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -15,10 +26,56 @@ loading {
 
 menu {
     height: 100vh;
+    width: 15vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: 2%;
     padding-left: 2%;
+    gap: 40px;
+}
+
+menu img {
+    width: 40px;
+    height: 60px;
+    align-self: center;
+}
+
+.menu__gaveta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    border: var(--border-color) solid 3px;
+    border-radius: 16px;
+    width: 70%;
+    height: 10%;
+
+}
+
+.menu__gaveta__dois {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    width: 80%;
+    height: 80%;
+    border-radius: 16px;
+    gap: 4%;
+}
+
+.menu__botao {
+    background-color: var(--background-color);
+    border-radius: 16px;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+#botao__light {
+    background-color: var(--primary-color);
 }
 
 main {
@@ -28,7 +85,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 50px; 
-    background-color: #F3F5FC;
+    background-color: var(--background2-color);
 }
 
 .main__info {
@@ -37,7 +94,7 @@ main {
     gap: 16px;
     font-size: 12px;
     font-weight: 400;
-    color: #495057;
+    color: var(--font-color);
 }
 
 .main__info__area {
@@ -51,10 +108,10 @@ main {
     border-radius: 24px;
     padding: 24px;
     font-size: 16px;
-    font-weight: 300;
-    border: #0A3871 solid 1px;
-    background-color: #F3F5FC;
-    color: #0A3871;
+    font-weight: 600;
+    border: var(--border-color) solid 1px;
+    background-color: white;
+    color: var(--primary-color);
 }
 
 .main__info__area__botao:hover {
@@ -62,7 +119,7 @@ main {
 }
 
 #botao__cript {
-    background-color: #0A3871;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -76,8 +133,8 @@ main {
 
 textarea {
     border: 0;
-    background-color: #F3F5FC;
-    color: #0A3871;
+    background-color: var(--background2-color);
+    color: var(--border-color);
     width: 60vw;
     height: 80%;
     font-size: 32px;
@@ -89,12 +146,12 @@ textarea:focus {
 }
 
 .resultado {
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
     border-radius: 32px;
     margin: 40px 40px 40px 0;
     height: 90vh;
     width: 90vw;
-    border: #0A3871 solid 2px;
+    border: var(--border-color) solid 2px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
@@ -114,6 +171,7 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    color: var(--font2-color);
 }
 
 #resultado__start__msg__titulo {
@@ -141,20 +199,20 @@ textarea:focus {
     height: 100%;
     width: 100%;
     font-size: 24px;
-    color: #495057;
+    color: var(--font2-color);
     font-weight: 500;
     overflow: auto;
 }
 
 #resultado__resposta__botao {
     border-radius: 32px;
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
     padding: 24px;
     width: 80%;
     font-size: 16px;
     font-weight: 300;
-    border: #0A3871 solid 1px;
-    color: #0A3871;
+    border: var(--border-color) solid 1px;
+    color: var(--border-color);
 
 }
 
@@ -163,6 +221,23 @@ textarea:focus {
 }
 
 @media (max-width: 1100px) {
+    .menu__gaveta {
+        flex-direction: row;
+        overflow: visible;
+        box-sizing: unset;
+        width: 20%;
+        height: 100%;
+    }
+    .menu__gaveta__dois {
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        gap: 4%;
+    }
+    .menu__botao {
+        width: 60px;
+        height: 60px;
+    }
     menu {
         width: 100vw;
         flex-direction: row;
@@ -191,9 +266,29 @@ textarea:focus {
         align-content: start;
     }
 
+    
+    .resultado__start img {
+        height: 40%;
+    }
+
+    #resultado__start__msg__titulo {
+        font-size: 20px;
+    }
+    
+    #resultado__start__msg__principal {
+        font-size: 14px;
+    }
+
     #resultado__resposta__principal {
         font-size: 20px;
     }
 
     
+}
+
+@media (max-width: 500px) {
+    .menu__gaveta {
+        width: 35%;
+        height: 100%;
+    }
 }

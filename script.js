@@ -8,6 +8,10 @@ let result__resposta__principal = document.getElementById("resultado__resposta__
 let palavraSeparada = [];
 let palavraSecreta = [];
 let novaPalavra = "";
+let root = document.querySelector(':root');
+let botaoDark = document.getElementById("botao__dark");
+let botaoLight = document.getElementById("botao__light");
+
 
 function ifvalue(value, letra, palavra, index, array, length) {
     if (length != false) {
@@ -48,7 +52,6 @@ function criptografar() {
     result__resposta__principal.innerHTML = palavraCript;
 
     palavraSecreta = [];
-
 }
 
 function descriptografar() {
@@ -64,6 +67,33 @@ function descriptografar() {
 
 function copiar() {
     navigator.clipboard.writeText(result__resposta__principal.innerHTML)
+}
+
+function darkmode() {
+    root.style.setProperty("--background-color", "#1c1f20")
+    root.style.setProperty("--background2-color", "#181a1b")
+    root.style.setProperty("--primary-color", "#0A3871")
+    root.style.setProperty("--border-color", "#8cc4f5")
+    root.style.setProperty("--font-color", "#b5afa6")
+    root.style.setProperty("--font2-color", "White")
+    botaoDark.style.backgroundColor = "#8cc4f5";
+    botaoLight.style.backgroundColor = "#1c1f20";    
+    botaoDark.style.color = "#0A3871";
+    botaoLight.style.color = "#0A3871";
+}
+
+function daymode() {
+    root.style.setProperty("--background-color", "White")
+    root.style.setProperty("--background2-color", "#F3F5FC")
+    root.style.setProperty("--primary-color", "#0A3871")
+    root.style.setProperty("--border-color", "#0A3871")
+    root.style.setProperty("--font-color", "#495057")
+    root.style.setProperty("--font2-color", "Black")
+    botaoDark.style.backgroundColor = "White";
+    botaoLight.style.backgroundColor = "#0A3871";
+    botaoDark.style.color = "Black";
+    botaoLight.style.color = "Black";
+
 }
 
 video.addEventListener("ended", (event) => {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/62de3502c5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Decodificador JavaScript - Alura</title>
 </head>
@@ -16,6 +17,17 @@
     <main>
         <menu>
             <img src="img/Vector.png">
+            <div class="menu__gaveta">
+                <div class="menu__gaveta__dois">
+                    <button class="menu__botao" id="botao__light" onclick="daymode()">
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                    <button class="menu__botao" id="botao__dark" onclick="darkmode()">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+
         </menu>
         <div class="main">
             <textarea spellcheck="false" autofocus placeholder="Digite seu texto." id="input" type="text" value=""></textarea>
@@ -37,6 +49,7 @@
                 <div class="resultado__start__msg">
                     <h1 id="resultado__start__msg__titulo">Nenhuma mensagem Encontrada.</h1>
                     <p id="resultado__start__msg__principal">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    <p id="resultado__start__msg__principal">Feito por Filipe Ciríaco</p> 
                 </div>
             </div>
             <div class="resultado__resposta">

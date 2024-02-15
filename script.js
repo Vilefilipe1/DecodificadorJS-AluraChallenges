@@ -63,7 +63,7 @@ function descriptografar() {
 }
 
 function copiar() {
-    
+    navigator.clipboard.writeText(result__resposta__principal.innerHTML)
 }
 
 video.addEventListener("ended", (event) => {

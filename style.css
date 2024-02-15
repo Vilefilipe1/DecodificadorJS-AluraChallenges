@@ -157,3 +157,7 @@ textarea:focus {
     color: #0A3871;
 
 }
+
+#resultado__resposta__botao:hover {
+    cursor: pointer;
+}

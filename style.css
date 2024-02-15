@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
+    box-sizing: border-box
 }
 loading {
     background-color: black;
@@ -34,8 +35,8 @@ main {
     display: flex;
     height: 100vh;
     padding-top: 10%;
+    box-sizing: border-box;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 input {
@@ -43,9 +44,8 @@ input {
     background-color: #F3F5FC;
     color: #0A3871;
     width: 60vw;
+    height: 80%;
     font-size: 32px;
-    text-align: justify;
-    box-sizing: border-box;
 }
 
 input:focus {
@@ -53,29 +53,69 @@ input:focus {
 }
 
 .resultado {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    width: 30vw;
-    height: 95vh;
+    background-color: #FFFFFF;
     border-radius: 32px;
+    margin: 40px 40px 40px 0;
+    height: 90vh;
+    width: 90vw;
+    border: #0A3871 solid 2px;
 }
 
-.resultado__msg {
+.resultado__start {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 32px;
+}
+
+.resultado__start__msg {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
 }
 
-#msg-titulo {
+#resultado__start__msg__titulo {
     font-size: 24px;
 }
 
-#msg-principal {
+#resultado__start__msg__principal {
     font-size: 16px;
+}
+
+.resultado__resposta {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 32px;
+}
+
+#resultado__resposta__principal {
+    word-wrap: break-word;
+    word-break: break-all;
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+    color: #495057;
+    font-weight: 500;
+    overflow: auto;
+}
+
+#resultado__resposta__botao {
+    border-radius: 32px;
+    background-color: #FFFFFF;
+    padding: 24px;
+    width: 80%;
+    font-size: 16px;
+    border: #0A3871 solid 1px;
+    color: #0A3871;
+
 }

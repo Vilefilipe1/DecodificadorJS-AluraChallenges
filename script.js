@@ -2,8 +2,9 @@ let video = document.querySelector(".loading-video");
 let loading = document.getElementsByClassName("loading")[0];
 let main = document.querySelector("main");
 let input = document.getElementById("input");
-let titulo = document.getElementById("msg-titulo");
-let principal = document.getElementById("msg-principal");
+let resul__start = document.getElementsByClassName("resultado__start")[0];
+let resul__resposta = document.getElementsByClassName("resultado__resposta")[0];
+let result__resposta__principal = document.getElementById("resultado__resposta__principal");
 let palavraSeparada = [];
 let palavraSecreta = [];
 let novaPalavra = "";
@@ -42,8 +43,10 @@ function criptografar() {
     palavraSeparada = input.value.split("");
     palavraSeparada.forEach(trocar);
     let palavraCript = palavraSecreta.join("");
-    titulo.innerHTML = "";
-    principal.innerHTML = palavraCript;
+    // principal.innerHTML = palavraCript;
+    resul__start.style.display = "none";
+    resul__resposta.style.display = "flex";
+    result__resposta__principal.innerHTML = palavraCript;
 
     palavraSecreta = [];
 
